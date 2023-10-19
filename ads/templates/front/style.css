@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: white;
+    color: black;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+/* Стиль ссылок шапки */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Стиль ссылки логотипа */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Изменение цвета фона при наведении курсора */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Стиль активной/текущей ссылки */
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Сдвигаем секцию со ссылками вправо */
+.header-right {
+  float: right;
+}
+
+/* Медиа-запрос для адаптивности – когда ширина
+  экрана 650px или меньше, ссылки будут друг над другом */
+
+section {
+    margin-top: 100px;
+}
+
+.container {
+    max-width: 80%;
+    padding: 0 10px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.header__ad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10%;
+    margin-bottom: 30px;
+}
+
+.header__ad h1 {
+    font-size: 50px;
+}
+
+.header__ad h2 {
+    font-size: 46px;
+}
+
+.function__btn {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.function__btn button {
+    background-color: white;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgb(109, 108, 108);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.function__btn button img {
+    width: 25px;
+}
+
+.function__btn span {
+    font-size: 19px;
+    padding-left: 20px;
+}
+
+.main__block {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+}
+
+.main__block>img {
+    width: 60%;
+}
+
+.main__block__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: calc(40% - 30px);
+}
+
+.main__block__info button {
+    width: 100%;
+    color: white;
+    padding: 10px 5px;
+    font-size: 25px;
+    border: 0;
+    border-radius: 5px;
+    line-height: 25px;
+    background-color: rgb(66, 185, 66);
+    cursor: pointer;
+}
+
+
+.main__block__info button span{
+    font-size: 20px;
+}
+
+.main__block__info button:nth-child(2){
+    background-color: rgb(84, 84, 248);
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review__star svg{
+    fill: gold;
+}
+
+a{
+    color: skyblue;
+    text-decoration: none;
+}
+
+.about p svg{
+    fill: gold;
+}
+
+.partner{
+    padding: 5px;
+    background-color: skyblue;
+    margin-top: 5px;
+    max-width: 250px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.subcribe{
+    background-color: whitesmoke !important;
+    color: black !important;
+    margin-top: 10px;
+    border: 1px solid rgb(109, 108, 108) !important;
+}
+
+
+@media (max-width:1350px) {
+    .main__block{
+        flex-wrap:wrap;
+    }
+
+    .main__block>img {
+        width: 100%;
+    }
+
+    .main__block__info{
+        width: 100%;
+    }
+}
+
+@media (max-width:1110px) {
+    .header__ad h1 {
+        font-size: 40px;
+    }
+    .header__ad h2 {
+        font-size: 38px;
+    }
+
+    .function__btn {
+        flex-direction: column;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: start;
+        gap: 15px;
+    }
+
+    .function__btn span {
+        padding-left: 0px;
+    }
+
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width:460px){
+    .header__ad h1 {
+        font-size: 25px;
+    }
+
+    .header__ad h2 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+
