@@ -2,6 +2,7 @@
 {% load static %}
     {% block content %}
         <section id="ad">
+            {% if person %}
         {% for person in person %}
         <div class="container">
 
@@ -54,7 +55,7 @@
 
                     <div class="about">
                         <div class="review">
-                            <span>{{ count }},0</span>
+                            <span>5,0</span>
                             <div class="review__stars">
                                 {% for i in randoma %}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -93,4 +94,11 @@
         </div>
         {% endfor %}
     </section>
+{% else %}
+<section id="add">
+       <div class="mess">
+         Объявлений нет ;)
+        </div>
+</section>
+{% endif %}
     {% endblock %}

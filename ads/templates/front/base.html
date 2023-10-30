@@ -7,15 +7,28 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Avito</title>
 </head>
 <body>
     <header>
-          <div class="header">
+      <div class="header">
   <a href="/" class="logo">AvitoAnalogue</a>
-  <div class="header-right">
-    <a class="active" href="add">Добавить объявление</a>
-  </div>
+  {% if user.is_authenticated %}
+<div class="header-right">
+    {% csrf_token %}
+        <a class="active" href="{% url 'logoutuser' %}">Выйти</a>
+      </div>
+           <div class="header-right">
+        <a class="active" href="add">Добавить объявление</a>
+      </div>
+
+  {% else %}
+          <div class="header-right">
+        <a class="active" href="{% url 'loginuser' %}">Войти</a>
+      </div>
+  {% endif %}
+
 </div>
     </header>
 {% block content %}{% endblock %}
